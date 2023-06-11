@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/ea59863933.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="min-h-screen bg-gray-50">
+  <main>
+    <section class="container mx-auto px-4 py-8 landscape:max-w-screen-lg landscape:mx-auto landscape:px-4 md:w-4/5">
+      <h1 class=" text-4xl font-bold mb-4 bg-red-600 text-white text-center p-4">Todo List</h1>
+      <section class="mb-12">
+        <section class="md:flex md:items-center mb-2">
+          <label for="listSelect" class="md:mr-2">Add to List:</label>
+          <select id="listSelect" class="p-2 border rounded">
+            <option value="Home">Home</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+          </select>
+        </section>
+
+        <section class="flex items-center">
+          <button id="addTaskBtn" class="p-2 border rounded-full mr-2" aria-label="Add Task">
+            <i class="fas fa-plus text-blue-500"></i>
+          </button>
+          <label for="taskInput" class="sr-only">Task Name:</label>
+          <input id="taskInput" type="text" class="p-2 border rounded w-full" placeholder="Enter task name...">
+        </section>
+      </section>
+
+      <section class="md:flex flex-row mb-4">
+        <section class="md:w-1/2 md:pr-2 mb-12">
+          <section class=" md:flex items-start mb-6 flex-col">
+            <section class="md:flex items-center mb-6">
+              <label for="statusFilter" class="md:mr-2">Filter by Status:</label>
+              <select id="statusFilter" class="p-2 border rounded">
+                <option value="All">All</option>
+                <option value="Todo">Todo</option>
+                <option value="Done">Done</option>
+              </select>
+            </section>
+
+            <section class="md:flex items-center">
+              <label for="listFilter" class="md:mr-2">Filter by List:</label>
+              <select id="listFilter" class="p-2 border rounded">
+                <option value="All">All</option>
+                <option value="Home">Home</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+              </select>
+            </section>
+          </section>
+
+          <section class="md:flex">
+            <button id="deleteDoneTasksBtn"
+              class="p-2 border-2 rounded-lg bg-red-600 hover:bg-red-700 text-white mr-6 font-medium hover:border-gray-600 focus:border-black focus:outline-none active:border-black active:outline-none hover:ring-2 focus:ring-2"
+              aria-label="Delete Done Tasks" role="button" aria-pressed="false">
+              Delete Done Tasks
+            </button>
+          </section>
+        </section>
+
+        <section class="md:w-5/6 md:pl-2">
+          <section>
+            <section class=" mb-8 ">
+              <h2 class="text-lg font-bold mb-1" id="homeTasks">Home <span id="homeTasksCount"
+                  class="text-sm font-normal"></span>
+              </h2>
+              <hr class="border-t border-gray-300 mb-6">
+              <ul id="home_Tasks"></ul>
+            </section>
+
+            <section class="mb-8">
+              <h2 class="text-lg font-bold mb-1" id="workTasks">Work <span id="workTasksCount"
+                  class="text-sm font-normal"></span>
+              </h2>
+              <hr class="border-t border-gray-300 mb-6">
+              <ul id="work_Tasks"></ul>
+            </section>
+
+            <section class="mb-8">
+              <h2 class="text-lg font-bold mb-1" id="studyTasks">Study <span id="studyTasksCount"
+                  class="text-sm font-normal"></span>
+              </h2>
+              <hr class="border-t border-gray-300 mb-6">
+              <ul id="study_Tasks"></ul>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
