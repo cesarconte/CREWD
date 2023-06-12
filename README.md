@@ -85,6 +85,6 @@ de eliminar la tarea.
 
 2. OTROS:
 - En el diseño en general ( pero especialmente, los colores), me he basado en la App Todoist (https://todoist.com/).
-- He tratado de tener en cuenta todo lo relativo en cuanto a Accesibilidad (contraste de colores, poder navegar mediante el teclado,... ).
+- He tratado de tener en cuenta todo lo relativo en cuanto a Accesibilidad (contraste de colores, navegración a través del teclado,... ).
 - Mediante Tailwind, he añadido a la página un diseño "responsive".
  
